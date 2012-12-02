@@ -1,4 +1,4 @@
-nestoria
+Nestoria
 ========
 
 Nestoria API Client
