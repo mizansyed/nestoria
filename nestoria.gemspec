@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mizansyed@gmail.com"]
   gem.description   = %q{An API client for Netstoria}
   gem.summary       = %q{An API client for Netstoria using the official API representation}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/mizansyed/nestoria"
 
   gem.add_dependency 'json'
 

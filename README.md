@@ -1,4 +1,5 @@
-# Nestoria
+Nestoria
+========
 
 This an API client for Nestoria property searches
 
