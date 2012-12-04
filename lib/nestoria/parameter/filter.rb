@@ -15,6 +15,7 @@ module Nestoria
 
 
       def initialize(options={})
+        raise(TypeError, "Argument is expected to be a Hash") unless options
         check_valid(options)
         defaults = {
             :listing_type   => Nestoria::Constants::ListingType::BUY,
