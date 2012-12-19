@@ -15,16 +15,21 @@ module Nestoria
 
 
       def initialize(options={})
-        raise(TypeError, "Argument is expected to be a Hash") unless options
+        raise TypeError, "Argument is expected to be a Hash" unless options
         check_valid(options)
         defaults = {
-            :listing_type   => Nestoria::Constants::ListingType::BUY,
-            :property_type  => Nestoria::Constants::PropertyType::ALL,
-            :bedroom_min    => 1,
-            :bathroom_min   => 1
+            listing_type:   Nestoria::Constants::ListingType::BUY,
+            property_type:  Nestoria::Constants::PropertyType::ALL,
+            bedroom_min:    1,
+            bathroom_min:   1
         }
         merge_options(options, defaults)
         setup_vars
+      end
+
+
+      def self.verify_required
+
       end
 
     end

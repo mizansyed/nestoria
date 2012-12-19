@@ -17,13 +17,13 @@ module Nestoria
 
       def hash?(value)
         if !value.is_a? Hash
-          raise(TypeError, "Argument is expected to be a Hash")
+          raise TypeError, "Argument is expected to be a Hash"
         end
       end
 
       def blank?(hash)
         if hash.has_blank?
-          raise(Nestoria::InsufficientArgumentsError, "Options cannot be provided as blank")
+          raise Nestoria::InsufficientArgumentsError, "Options cannot be provided as blank"
         end
       end
 

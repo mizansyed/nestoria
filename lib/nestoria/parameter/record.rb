@@ -12,9 +12,9 @@ module Nestoria
       def initialize(options={})
         check_valid(options)
         defaults = {
-            :number_of_results    => 20,
-            :page                 => 1,
-            :sort                 => Nestoria::Constants::SortBy::RELEVANCY
+            number_of_results: 20,
+            page: 1,
+            sort: Nestoria::Constants::SortBy::RELEVANCY
         }
         merge_options(options, defaults)
         setup_vars

@@ -10,7 +10,7 @@ module Nestoria
 
     def options
       vars = self.instance_variables
-      vars.select! {|k| k.to_s != '@options'}
+      vars.select! {|k| k.to_s != "@options"}
       opts = {}
       vars.each do |var|
         v = var.to_s.delete("@")
