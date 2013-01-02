@@ -12,11 +12,10 @@ class ClientTest < MiniTest::Unit::TestCase
       end
 
       it "should provide a listing to all buyable properties in camden"  do
-        @listing_type = Nestoria::Constants::ListingType::BUY
+        @listing_type = Nestoria::Constants::ListingType::RENT
         @property_type = Nestoria::Constants::PropertyType::ALL
         @filter_param = Nestoria::Parameter::FilterParameter.new({listing_type: @listing_type, property_type: @property_type})
-
-        #@client.listings(@filter_params)
+        @client.listings(@filter_param)
       end
 
     end
