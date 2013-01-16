@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.iana.org/domains/example/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: FOUND
+    headers:
+      Date:
+      - Sun, 06 Jan 2013 19:51:48 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      Location:
+      - http://www.iana.org/domains/example
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sun, 06 Jan 2013 19:51:47 GMT
+recorded_with: VCR 2.4.0

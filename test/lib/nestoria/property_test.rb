@@ -16,7 +16,6 @@ class PropertyTest < MiniTest::Unit::TestCase
         end
       end
 
-
       it "must return same data as supplied as options"  do
         options = {
 
@@ -25,11 +24,11 @@ class PropertyTest < MiniTest::Unit::TestCase
             lister_name: "Joe Blogg Agency",
             lister_url:  "http://www.example.com/joeb",
             price: 199000,
-            summary: "You should really bu this place",
+            summary: "You should really buy this place",
             title: "4 Beds with 2 bathrooms"
         }
 
-        @property.set_property_instance(options)
+        @property.set_property_variables(options)
 
         options.each do  |k, v|
           @property.instance_variable_get("@#{k}").must_equal(v)
@@ -44,7 +43,7 @@ class PropertyTest < MiniTest::Unit::TestCase
             listing_type: "buy"
         }
 
-        @property.set_property_instance(options)
+        @property.set_property_variables(options)
         @property.property_type.must_equal(Nestoria::Constants::PropertyType::HOUSE.to_sym)
         @property.listing_type.must_equal(Nestoria::Constants::ListingType::BUY.to_sym)
       end

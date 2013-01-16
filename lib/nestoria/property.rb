@@ -1,8 +1,11 @@
 require "nestoria/enum"
+require "nestoria/helper/enum"
 
 module Nestoria
 
   class Property
+
+    include EnumHelper
 
     attr_reader    :auction_date,
                    :bathroom_number,
@@ -41,28 +44,16 @@ module Nestoria
 
     end
 
-    def set_property_instance (list_options)
+    def set_property_variables (list_options)
       list_options.each do|k,v|
         instance_variable_set(:"@#{k}", v)
       end
 
-      @property_type = set_data_as_enum @property_type, Nestoria::Constants::PropertyType
-      @listing_type = set_data_as_enum @listing_type, Nestoria::Constants::ListingType
+      @property_type = set_data_as_enum(self.property_type, Nestoria::Constants::PropertyType)
+      @listing_type = set_data_as_enum(self.listing_type, Nestoria::Constants::ListingType)
     end
 
-    private
 
-    def set_data_as_enum(instance_to_convert, constant_type)
-      converted_const = instance_to_convert
-      if instance_to_convert != nil
-        property = instance_to_convert.upcase;
-        constant_type.constants.find do | c |
-          type = constant_type.const_get(c)
-          converted_const = c if type == property
-        end
-      end
-
-    end
 
   end
 
