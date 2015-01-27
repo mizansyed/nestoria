@@ -1,7 +1,7 @@
 Nestoria
 ========
 
-This an API client for Nestoria property searches
+This is an API client for Nestoria property searches. This is an experimental project to learn Ruby
 
 ## Installation
 
